@@ -92,13 +92,96 @@
 #print(fav_veh + (bike_list[1]))
 #print(fav_veh + (bike_list[2]))
 
+#Modifying an Element in a List:
+#motorcycles = ['honda', 'yamaha', 'suzuki']
+#print(motorcycles)
+#motorcycles[0] = 'ducati'
+#print(motorcycles)
+
+#Appending Elements to the End of a List:
+#motorcycles = ['honda', 'yamaha', 'suzuki']
+#print(motorcycles)
+#motorcycles.append('ducati')
+#print(motorcycles)
+
+#motorcycles = []
+#motorcycles.append('honda')
+#motorcycles.append('yamaha')
+#motorcycles.append('suzuki')
+#print(motorcycles)
+
+#Inserting Elements into a List:
+#motorcycles = ['honda', 'yamaha', 'suzuki']
+#motorcycles.insert(0,'ducati')
+#print(motorcycles)
+
+#Removing an Item from the List using the del Statement:
+#motorcycles = ['honda', 'yamaha', 'suzuki']
+#print(motorcycles)
+#del motorcycles[0]
+#print(motorcycles)
+
+#Removing an Item Using the pop() Method
+#motorcycles = ['honda', 'yamaha', 'suzuki']
+#print(motorcycles)
+#popped_motorcycle = motorcycles.pop()
+#print(motorcycles)
+#print(popped_motorcycle)
+
+#Popping Items from any Position in a List
+#motorcycles = ['honda', 'yamaha', 'suzuki']
+#first_owned = motorcycles.pop(0)
+#print(f"The first motorcycle I owned was a {first_owned.title()}.")
+#NOTE: when you want to delete an item from a list and not use that item in any way, use the del statement; if you want to use an item as you remove it, use the pop() method.
+
+#Removing an Item by Value
+#motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+#print(motorcycles)
+#too_expensive = 'ducati'
+#motorcycles.remove(too_expensive)
+#print(motorcycles)
+#print(f"\nA {too_expensive.title()} is too expensive for me.")
+
 #3.4 Guest List:
-#guest_list = ['Andrico. ', 'Ben ', 'Rhys ']
-#message1 = "Dear, " + (guest_list[0]) + "I would like to respectfully invite you to my party tonight!"
-#message2 = "Dear, " + (guest_list[1]) + "I would like to respectfully invite you to my party tonight!"
-#message3 = "Dear, " + (guest_list[2]) + "I would like to respectfully invite you to my party tonight!"
+#guest_list = ['Andrico ', 'Ben, ', 'Rhys, '] 
+#message1 = "Dear " + (guest_list[0]) + "I would like to respectfully invite you to my party tonight!"
+#message2 = "Dear " + (guest_list[1]) + "I would like to respectfully invite you to my party tonight!"
+#message3 = "Dear " + (guest_list[2]) + "I would like to respectfully invite you to my party tonight!"
 #print(message1)
 #print(message2)
 #print(message3)
 
 #3.5 Changing Guest List
+#print('Unfortuntely, ' + (guest_list[0]) + ' cannot make it.')
+#guest_list[0] = 'Alfie, '
+#message1 = "Dear " + (guest_list[0]) + "I would like to respectfully invite you to my party tonight!"
+#message2 = "Dear " + (guest_list[1]) + "I would like to respectfully invite you to my party tonight!"
+#message3 = "Dear " + (guest_list[2]) + "I would like to respectfully invite you to my party tonight!"
+#print(message1)
+#print(message2)
+#print(message3)
+
+#3.6 More Guests:
+#print("Bigger dinner table!")
+#guest_list.insert(0, 'Stevie')
+#guest_list.insert(2, 'Wonder')
+#guest_list.insert(4, 'Chakakhan')
+#message1 = "Dear " + (guest_list[0]) + "I would like to respectfully invite you to my party tonight!"
+#message2 = "Dear " + (guest_list[1]) + "I would like to respectfully invite you to my party tonight!"
+#message3 = "Dear " + (guest_list[2]) + "I would like to respectfully invite you to my party tonight!"
+#message4 = "Dear " + (guest_list[3]) + "I would like to respectfully invite you to my party tonight!"
+#message5 = "Dear " + (guest_list[4]) + "I would like to respectfully invite you to my party tonight!"
+#print(message1)
+#print(message2)
+#print(message3)
+#print(message4)
+#print(message5)
+
+#3.7 Shrinking Guest List:
+#not_coming1 = guest_list.pop(0)
+#print(f"The first guest that cannot come is {not_coming1.title()}.")
+#not_coming2 = guest_list.pop(1)
+#print(f"The first guest that cannot come is {not_coming2.title()}.")
+#not_coming3 = guest_list.pop(2)
+#print(f"The first guest that cannot come is {not_coming3.title()}.")
+#print(guest_list)
