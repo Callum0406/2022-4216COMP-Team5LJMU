@@ -140,10 +140,10 @@
 #too_expensive = 'ducati'
 #motorcycles.remove(too_expensive)
 #print(motorcycles)
-#print(f"\nA {too_expensive.title()} is too expensive for me.")
+#print(f"\nA {too_expensive.title()} is too expensive for me.")#
 
 #3.4 Guest List:
-#guest_list = ['Andrico ', 'Ben, ', 'Rhys, '] 
+guest_list = ['Andrico ', 'Ben, ', 'Rhys, '] 
 #message1 = "Dear " + (guest_list[0]) + "I would like to respectfully invite you to my party tonight!"
 #message2 = "Dear " + (guest_list[1]) + "I would like to respectfully invite you to my party tonight!"
 #message3 = "Dear " + (guest_list[2]) + "I would like to respectfully invite you to my party tonight!"
@@ -163,9 +163,9 @@
 
 #3.6 More Guests:
 #print("Bigger dinner table!")
-#guest_list.insert(0, 'Stevie')
-#guest_list.insert(2, 'Wonder')
-#guest_list.insert(4, 'Chakakhan')
+#guest_list.insert(0, 'Stevie, ')
+#guest_list.insert(2, 'Wonder, ')
+#guest_list.insert(4, 'Chakakhan, ')
 #message1 = "Dear " + (guest_list[0]) + "I would like to respectfully invite you to my party tonight!"
 #message2 = "Dear " + (guest_list[1]) + "I would like to respectfully invite you to my party tonight!"
 #message3 = "Dear " + (guest_list[2]) + "I would like to respectfully invite you to my party tonight!"
@@ -185,3 +185,28 @@
 #not_coming3 = guest_list.pop(2)
 #print(f"The third guest that cannot come is {not_coming3.title()}.")
 #print(guest_list)
+#print(message1)
+#print(message2)
+#del guest_list[0]
+#del guest_list[0]
+#del guest_list[0]
+#print(guest_list)
+
+#3.8 Seeing the World:
+#holidays = ['Spain', 'France', 'Canada', 'USA', 'Japan']
+#print(holidays)
+#print(sorted(holidays))
+#holidays.reverse()
+#print(holidays)
+#holidays.reverse()
+#print(holidays)
+#holidays.sort(reverse=False)
+#print(holidays)
+
+#3.9 Dinner Guests:
+#coming = len(guest_list)
+
+#4.1 Pizzas:
+fav_pizza = ['Pepperoni', 'Meat Feast', 'BBQ Chicken']
+for fav_pizza in fav_pizza:
+    print(fav_pizza)
