@@ -11,7 +11,7 @@ loop=True
 
 while loop:
     main_menu()
-    choice = int(input("Enter your choice [1-5]: "))
+    choice = int(input("Enter your choice [1-6]: "))
     
     if choice==1:
         print ("Option 1 Selected")
