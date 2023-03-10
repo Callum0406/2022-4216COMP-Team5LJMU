@@ -32,7 +32,6 @@ def publisherNASales():
     ActivisionBaseNASales = ActivisionBaseData["NA_Sales"]
     ActivisionValueNASales = ActivisionValueData["NA_Sales"]
     ActivisionBlizzardNASales = ActivisionBlizzardData["NA_Sales"]
-    #ActivisionTotalNASales = round(sum(ActivisionBaseNASales),2) + round(sum(ActivisionValueNASales),2) + round(sum(ActivisionBlizzardNASales,2))
     ActivisionTotalNASales = round(sum(ActivisionBaseNASales) + sum(ActivisionBlizzardNASales) + sum(ActivisionValueNASales), 2)
 
     #Atari Total
@@ -94,6 +93,16 @@ def publisherNASales():
     GlobalStarNASales = GlobalStarData["NA_Sales"]
     GlobalStarTotalNASales = round(sum(GlobalStarNASales))
 
+    #Ignition Entertainment
+    IgnitionEntData = DATA[(DATA["Publisher"] == "Ignition Entertainment")]
+    IgnitionEntNASales = IgnitionEntData["NA_Sales"]
+    IgnitionEntTotalNASales = round(sum(IgnitionEntNASales))
+
+    #Infogrames
+    InfogramesData = DATA[(DATA["Publisher"] == "Infogrames")]
+    InfogramesNASales = InfogramesData["NA_Sales"]
+    InfogramesTotalNASales = round(sum(InfogramesNASales))
+
     #Just for testing. Template print("Pub:  " + str(PubTotalNASales) + " Million")
     print("Total Sales")
     print("3DO:  " + str(_3DOTotalNASales) + " Million")
@@ -111,6 +120,8 @@ def publisherNASales():
     print("Eidos Interactive:  " + str(EidosTotalNASales) + " Million")
     print("Empire Interactive:  " + str(EmpireIntTotalNASales) + " Million")
     print("Global Star:  " + str(GlobalStarTotalNASales) + " Million")
+    print("Ignition Entertainment:  " + str(IgnitionEntTotalNASales) + " Million")
+    print("Infogrames:  " + str(InfogramesTotalNASales) + " Million")
 
 
 publisherNASales()
@@ -120,4 +131,5 @@ publisherNASales()
 #daedalic, Devolver Digital, DSI games, Dusenberry Martin Racing, Encore, 
 #Focus Home Interactive, Funcom, FuRyu, Gathering of Developers, Gearbox Software, 
 #Genki, Global A Entertainment, GOA, Graffiti, Graphsim Entertainment, Gust, 
-#Headup Games, Hello Games
+#Headup Games, Hello Games, HMH Interactive, Iceberg Interactive, id Software
+#
