@@ -8,6 +8,7 @@ def main_menu():
     print("6. Exit")
 
 loop=True
+
 while loop:
     main_menu()
     choice = int(input("Enter your choice [1-6]: "))
