@@ -18,7 +18,7 @@ while loop:
     if choice==1:
         print ("Option 1 Selected")
 
-        sales.publisherSales("NA_Sales")
+        sales.top5publisherSalesNA("NA_Sales")
     elif choice==2:
         print ("Option 2 Selected")
         loop=False
