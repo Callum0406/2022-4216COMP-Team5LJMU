@@ -1,4 +1,4 @@
-import SalesPerPubPerRegion as sales
+import PublisherSalesPerRegion as sales
 
 def main_menu():
     print("--MENU--")
@@ -18,8 +18,7 @@ while loop:
     if choice==1:
         print ("Option 1 Selected")
 
-        sales.publisherNASales()
-        loop=False
+        sales.publisherSales("NA_Sales")
     elif choice==2:
         print ("Option 2 Selected")
         loop=False
