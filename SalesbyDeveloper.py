@@ -10,8 +10,10 @@ def top_5_developer_sales(globals):
 
     #Check to see what region has been selected
     if globals == "Global":
+
         #Group the data based on the publisher column and sum that data up. Specifying the data found in the NA_Sales column.
         developer_data = DATA.groupby("Developer").sum(numeric_only=True)[globals].reset_index()
+
         #Sort the data into descending order. Starting from the the best selling publishers. Limit the data to the top 5 publishers.
         developer_data = developer_data.sort_values(globals, ascending=False).head(5)
 
@@ -34,10 +36,10 @@ def top_5_developer_sales(globals):
     elif globals == "EU_Sales":
 
         developer_data = DATA.groupby("Developer").sum(numeric_only=True)[globals].reset_index()
+
         #Sort the data into descending order. Starting from the the best selling publishers. Limit the data to the top 5 publishers.
         developer_data = developer_data.sort_values(globals, ascending=False).head(5)
-
-        developer_names = developer_data.Developers
+        developer_names = developer_data.Developer
         game_sales = developer_data.EU_Sales
         
         #Set up the bar chart
