@@ -5,7 +5,7 @@ import matplotlib.pyplot as matplot
 DATA = pd.read_csv("Tagged-Data-Final.csv")
 
 
-def top5publisherSalesNA(region):
+def top5PublisherSales(region):
 
 
     #Check to see what region has been selected
@@ -50,5 +50,3 @@ def top5publisherSalesNA(region):
 
         #Show the bar chart
         matplot.show()
-
-top5publisherSalesNA("EU_Sales")
