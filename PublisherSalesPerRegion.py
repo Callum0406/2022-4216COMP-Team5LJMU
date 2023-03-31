@@ -6,7 +6,7 @@ import matplotlib.pyplot as matplot
 #Read in the data from the CSV
 DATA = pd.read_csv("Tagged-Data-Final.csv")
 
-
+ 
 
 def top5PublisherSales(region):
     #Check to see what region has been selected
