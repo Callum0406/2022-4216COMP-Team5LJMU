@@ -1,4 +1,3 @@
-# Louis - Importing code 
 import PublisherSalesPerRegion as PubSales
 
 def main_menu():
@@ -15,14 +14,12 @@ loop=True
 while loop:
     main_menu()
     choice = int(input("Enter your choice [1-6]: "))
-    
     if choice==1:
         loops=False
     elif choice==2:
         print ("Option 2 Selected")
         loop=False
     elif choice==3:
-        #Louis' Code
         publisherSalesLoop = True
         publisherRegionChoice = 0
         while publisherSalesLoop:

@@ -1,8 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as matplot
-
 #Written by Louis Roberts
-
 #Read in the data from the CSV
 DATA = pd.read_csv("Tagged-Data-Final.csv")
 
