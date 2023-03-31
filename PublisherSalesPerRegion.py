@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as matplot
 
+#Written by Louis Roberts
+
 #Read in the data from the CSV
 DATA = pd.read_csv("Tagged-Data-Final.csv")
 
@@ -9,7 +11,7 @@ DATA = pd.read_csv("Tagged-Data-Final.csv")
 def top5PublisherSales(region):
     #Check to see what region has been selected
     if region == "NA_Sales":
-        #Group the data based on the publisher column and sum that data up. Specifying the data found in the NA_Sales column.
+        #Group the data based on the publisher column and sum that data up.
         publisher_data = DATA.groupby("Publisher").sum(numeric_only=True)[region].reset_index()
         #Sort the data into descending order. Starting from the the best selling publishers. Limit the data to the top 5 publishers.
         publisher_data = publisher_data.sort_values(region, ascending=False).head(5)
