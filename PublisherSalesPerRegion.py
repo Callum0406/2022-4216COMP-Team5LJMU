@@ -44,7 +44,7 @@ def top5PublisherSales(region):
         matplot.bar(publisher_names, game_sales)
 
         #Set graph labels and title.
-        matplot.title("Best Selling Publishers in North America")
+        matplot.title("Best Selling Publishers in Europe")
         matplot.xlabel("Publishers")
         matplot.ylabel("Sales")
         
