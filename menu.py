@@ -1,4 +1,5 @@
 import PublisherSalesPerRegion as PubSales
+import MeanCriticScores as MeanScores
 
 def main_menu():
     print("--MENU--")
@@ -15,12 +16,16 @@ while loop:
     main_menu()
     choice = int(input("Enter your choice [1-6]: "))
     if choice==1:
-        loops=False
+        #Dom's Code
+        loop=False
+        MeanScores.MeanCriticScores()
     elif choice==2:
         print ("Option 2 Selected")
         loop=False
     elif choice==3:
+        #Louis' code
         publisherSalesLoop = True
+        loop=False
         publisherRegionChoice = 0
         while publisherSalesLoop:
             print("Select the region to display.")
@@ -29,12 +34,13 @@ while loop:
             publisherSalesChoice = int(input())
             if publisherSalesChoice==1:
                 PubSales.top5PublisherSales("NA_Sales")
+                publisherSalesLoop = False
             elif publisherSalesChoice==2:
                 PubSales.top5PublisherSales("EU_Sales")
+                publisherSalesLoop = False
             else:
                 print("Error: Invalid Option")
                 quit()
-        loop=False
     elif choice==4:
         print ("Option 4 Selected")
         loop=False
@@ -46,4 +52,6 @@ while loop:
         loop=False
     else:
         print("Invalid selection!")
+
+print ("Exiting...")
 	
