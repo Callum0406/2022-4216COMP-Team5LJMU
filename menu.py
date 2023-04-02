@@ -3,7 +3,7 @@ import MeanCriticScores as MeanScores
 
 def main_menu():
     print("--MENU--")
-    print("1. Option 1")
+    print("1. Display Mean Critic score for each genre")
     print("2. Option 2")
     print("3. Display top 5 selling publishers per region")
     print("4. Option 4")
