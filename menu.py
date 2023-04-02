@@ -35,9 +35,11 @@ while loop:
             if publisherSalesChoice==1:
                 PubSales.top5PublisherSales("NA_Sales")
                 publisherSalesLoop = False
+                loop=False
             elif publisherSalesChoice==2:
                 PubSales.top5PublisherSales("EU_Sales")
                 publisherSalesLoop = False
+                loop=False
             else:
                 print("Error: Invalid Option")
                 quit()
