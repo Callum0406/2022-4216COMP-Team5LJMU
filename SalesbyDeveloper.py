@@ -1,166 +1,34 @@
 import pandas as pd
-import matplotlib.pyplot as matplot
+import matplotlib.pyplot as plt
 
-#Read in the data from the CSV
-DATA = pd.read_csv("Tagged-Data-Final.csv")
-def main_menu():
-    print("--MENU--")
-    print("1. Global")
-    print("2. Europe")
-    print("3. North America")
-    print("4. Japan")
-    print("5. Other")
-    print("6. Exit")
+# Read the data from the Excel file
+DATA = pd.read_csv('Tagged-Data-Final.csv')
 
-loop=True
+# Get the top 5 developer sales for each region
+global_sales = DATA.nlargest(5, 'Global_Sales')['Global_Sales'].tolist()
+na_sales = DATA.nlargest(5, 'NA_Sales')['NA_Sales'].tolist()
+eu_sales = DATA.nlargest(5, 'EU_Sales')['EU_Sales'].tolist()
+jp_sales = DATA.nlargest(5, 'JP_Sales')['JP_Sales'].tolist()
+other_sales = DATA.nlargest(5, 'Other_Sales')['Other_Sales'].tolist()
 
-while loop:
-    main_menu()
-    choice = int(input("Enter your choice [1-6]: "))
+# Labels for the x-axis and y-axis
+regions = ['Global', 'North America', 'Europe', 'Japan', 'Other']
+sales = 'Sales (in millions)'
 
-    if choice==1:
-        print ("Global Selected")
-        loop=False
-    elif choice==2:
-        print ("Europe Selected")
-        loop=False
-    elif choice==3:
-        print ("North America Selected")
-        loop=False
-    elif choice==4:
-        print ("Japan Selected")
-        loop=False
-    elif choice==5:
-        print("Other Selected")
-        loop=False
-    elif choice==6:
-        print ("Exiting...")
-        loop=False
-    else:
-        print("Invalid selection!")
+# Plot the data
+plt.plot(regions, global_sales, label='Global')
+plt.plot(regions, na_sales, label='North America')
+plt.plot(regions, eu_sales, label='Europe')
+plt.plot(regions, jp_sales, label='Japan')
+plt.plot(regions, other_sales, label='Other')
 
-def top_5_developer_sales(globals):
+# Set the title and axis labels
+plt.title('Top 5 Developer Sales of Games in Different Regions')
+plt.xlabel('Regions')
+plt.ylabel(sales)
 
+# Show the legend
+plt.legend()
 
-    #Check to see what region has been selected
-    if choice==1:
-        print ("Global Selected")
-        loop=False
-
-        #Group the data based on the publisher column and sum that data up. Specifying the data found in the NA_Sales column.
-        developer_data = DATA.groupby("Developer").sum(numeric_only=True)[globals].reset_index()
-
-        #Sort the data into descending order. Starting from the the best selling publishers. Limit the data to the top 5 publishers.
-        developer_data = developer_data.sort_values(globals, ascending=False).head(5)
-
-        #Get the values for the chart
-        developer_names = developer_data.Developer
-        game_sales = developer_data.globals
-
-        #Set up the bar chart
-        matplot.bar(developer_names, game_sales)
-
-
-        #Set graph labels and title.
-        matplot.title("Best Selling Developers in North America")
-        matplot.xlabel("Developers")
-        matplot.ylabel("Sales")
-
-        #Show the bar chart
-        matplot.show()
-    
-    elif choice==2:
-        print ("Global Selected")
-        loop=False
-
-        developer_data = DATA.groupby("Developer").sum(numeric_only=True)[globals].reset_index()
-
-        #Sort the data into descending order. Starting from the the best selling publishers. Limit the data to the top 5 publishers.
-        developer_data = developer_data.sort_values(globals, ascending=False).head(5)
-        developer_names = developer_data.Developer
-        game_sales = developer_data.EU_Sales
-        
-        #Set up the bar chart
-        matplot.bar(developer_names, game_sales)
-
-        #Set graph labels and title.
-        matplot.title("Best Selling Developer in Europe")
-        matplot.xlabel("Developer")
-        matplot.ylabel("Sales")
-        
-        #Show the bar chart
-        matplot.show()
-
-top_5_developer_sales("Global_Sales")
-
-elif choice==3:
-print ("North America Selected")
-loop=False
-        
-developer_data = DATA.groupby("Developer").sum(numeric_only=True)[globals].reset_index()
-
-        #Sort the data into descending order. Starting from the the best selling publishers. Limit the data to the top 5 publishers.
-developer_data = developer_data.sort_values(globals, ascending=False).head(5)
-developer_names = developer_data.Developer
-game_sales = developer_data.NA_Sales
-        
-        #Set up the bar chart
-matplot.bar(developer_names, game_sales)
-
-        #Set graph labels and title.
-matplot.title("Best Selling Developer in North America")
-matplot.xlabel("Developer")
-matplot.ylabel("Sales")
-        
-        #Show the bar chart
-matplot.show()
-
-top_5_developer_sales("NA_Sales")
-
- elif choice==4:
-print("Japan Selected")
-loop=False
-
-developer_data = DATA.groupby("Developer").sum(numeric_only=True)[globals].reset_index()
-
-        #Sort the data into descending order. Starting from the the best selling publishers. Limit the data to the top 5 publishers.
-developer_data = developer_data.sort_values(globals, ascending=False).head(5)
-developer_names = developer_data.Developer
-game_sales = developer_data.JP_Sales
-        
-        #Set up the bar chart
-matplot.bar(developer_names, game_sales)
-
-        #Set graph labels and title.
-matplot.title("Best Selling Developer in Japan")
-matplot.xlabel("Developer")
-matplot.ylabel("Sales")
-        
-        #Show the bar chart
-matplot.show()
-
-top_5_developer_sales("Japan_Sales")
-
-elif choice==5:
-print ("Other Selected")
-loop=False
-
-developer_data = DATA.groupby("Developer").sum(numeric_only=True)[globals].reset_index()
-
-        #Sort the data into descending order. Starting from the the best selling publishers. Limit the data to the top 5 publishers.
-developer_data = developer_data.sort_values(globals, ascending=False).head(5)
-developer_names = developer_data.Developer
-game_sales = developer_data.Other_Sales
-        
-        #Set up the bar chart
-matplot.bar(developer_names, game_sales)
-
-        #Set graph labels and title.
-matplot.title("Best Selling Developer in Other Reigon")
-matplot.xlabel("Developer")
-matplot.ylabel("Sales")
-        
-        #Show the bar chart
-matplot.show()
-
-top_5_developer_sales("Other_Sales")
+# Display the plot
+plt.show()
