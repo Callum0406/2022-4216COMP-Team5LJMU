@@ -23,7 +23,7 @@ plt.plot(regions, jp_sales, label='Japan')
 plt.plot(regions, other_sales, label='Other')
 
 # Set the title and axis labels
-plt.title('Top 5 Developer Sales of Games in Different Regions')
+plt.title('Top 5 Sales of Games in Different Regions')
 plt.xlabel('Regions')
 plt.ylabel(sales)
 
