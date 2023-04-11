@@ -8,6 +8,7 @@ How to use:
     menu.py
     MeanCriticScores.py
     PublisherSalesPerRegion.py
+    SalesbyRegion.py
     Tagged-Data-Final.csv
     (Insert rest here)
 
