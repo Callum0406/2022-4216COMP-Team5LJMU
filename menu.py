@@ -1,4 +1,8 @@
 import GenrePieChartData as PieData
+import PublisherSalesPerRegion as PubSales
+import MeanCriticScores as MeanScores
+import SalesbyRegion as RegSales
+import dataCallum as dc
 
 def main_menu():
     print("--MENU--")
