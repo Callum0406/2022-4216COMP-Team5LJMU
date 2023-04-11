@@ -1,8 +1,8 @@
 import GenrePieChartData as PieData
-import PublisherSalesPerRegion as PubSales
-import MeanCriticScores as MeanScores
-import SalesbyRegion as RegSales
-import dataCallum as dc
+#import PublisherSalesPerRegion as PubSales
+#import MeanCriticScores as MeanScores
+#import SalesbyRegion as RegSales
+#import dataCallum as dc
 
 def main_menu():
     print("--MENU--")
@@ -33,7 +33,7 @@ while loop:
         loop=False
     elif choice==5:
         print("Option 5 Selected")
-        print(PieData)
+        PieData()
         loop=False
     elif choice==6:
         print ("Exiting...")
