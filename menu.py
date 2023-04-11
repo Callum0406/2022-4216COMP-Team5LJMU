@@ -1,17 +1,14 @@
 import PublisherSalesPerRegion as PubSales
 import GenreCriticScores as GenreScores
 
-def main_menu():
-    print("--MENU--")
-    print("1. Genre Critic Scores")
-    print("2. Option 2")
+
 
 import SalesbyRegion as RegSales
 import dataCallum as dc
 
 def main_menu():
     print("--MENU--")
-    print("1. Display Mean Critic score for each genre")
+    print("1. Display Critic Score Data for Genres")
     print("2. Display 10 highest critically scored games")
     print("3. Display top 5 selling publishers per region")
     print("4. Display regions with most games sold")
