@@ -5,8 +5,16 @@ def main_menu():
     print("--MENU--")
     print("1. Genre Critic Scores")
     print("2. Option 2")
+
+import SalesbyRegion as RegSales
+import dataCallum as dc
+
+def main_menu():
+    print("--MENU--")
+    print("1. Display Mean Critic score for each genre")
+    print("2. Display 10 highest critically scored games")
     print("3. Display top 5 selling publishers per region")
-    print("4. Option 4")
+    print("4. Display regions with most games sold")
     print("5. Option 5")
     print("6. Exit")
 
@@ -47,7 +55,8 @@ while loop:
                 quit()
         
     elif choice==2:
-        print ("Option 2 Selected")
+        #Callum's code
+        dc.dataCallum()
         loop=False
     elif choice==3:
         #Louis' code
@@ -70,9 +79,11 @@ while loop:
             else:
                 print("Error: Invalid Option")
                 quit()
+    #Charlie's Code
     elif choice==4:
-        print ("Option 4 Selected")
+        print ("Sales by Region")
         loop=False
+        RegSales.SalesbyRegion()
     elif choice==5:
         print("Option 5 Selected")
         loop=False
