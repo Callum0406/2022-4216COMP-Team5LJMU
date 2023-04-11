@@ -37,7 +37,7 @@ def optionMenu():
             criticsc = extracted_data.Critic_Score
 
             matplot.bar(name, criticsc)
-            matplot.title("Top Ten Games By Critic Score")
+            matplot.title("Ten Lowest Games By Critic Score")
 
             matplot.xlabel("Name")
             matplot.ylabel("Critic Score")
