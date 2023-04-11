@@ -14,10 +14,8 @@ compiled_data = compiled_data.sort_values(salesRegion, ascending=False).head(5)
 genre_label = compiled_data.Genre
 region_name = compiled_data.NA_Sales
 
-
-
 plt.pie(region_name, labels=genre_label, autopct='%1.1f%%')
-plt.title('NA Sales by Genre')
+plt.title('Top 5 NA Sales by Genre')
 plt.axis('equal')
 plt.show()
 
