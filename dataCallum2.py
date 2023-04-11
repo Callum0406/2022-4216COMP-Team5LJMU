@@ -19,7 +19,6 @@ while loop:
         #shows data descending 
         name = extracted_data.Name
         criticsc = extracted_data.Critic_Score
-
         matplot.bar(name, criticsc)
         matplot.title("Ten Lowest Scored Games")
 
