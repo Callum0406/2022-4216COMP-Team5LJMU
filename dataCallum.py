@@ -16,7 +16,7 @@ matplot.title("Top Ten Games By Critic Score")
 matplot.xlabel("Name")
 matplot.ylabel("Critic Score")
 #axis labels
-matplot.show
+matplot.show()
 #produces bar chart
     
    
