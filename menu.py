@@ -1,9 +1,9 @@
 import PublisherSalesPerRegion as PubSales
-import MeanCriticScores as MeanScores
+import GenreCriticScores as GenreScores
 
 def main_menu():
     print("--MENU--")
-    print("1. Display Mean Critic score for each genre")
+    print("1. Genre Critic Scores")
     print("2. Option 2")
     print("3. Display top 5 selling publishers per region")
     print("4. Option 4")
@@ -17,8 +17,35 @@ while loop:
     choice = int(input("Enter your choice [1-6]: "))
     if choice==1:
         #Dom's Code
+        criticScoreLoop = True
         loop=False
-        MeanScores.MeanCriticScores()
+        criticScoreOption = 0
+        while criticScoreLoop:
+            print("Select the option to display.")
+            print("1. Mean Critic Scores")
+            print("2. Top 3 Genres with Highest Total Critic Score")
+            print("3. Bottom 3 Genres with Lowest Total Critic Score")
+            print("4. Quit")
+            criticScoreOption = int(input())
+            if criticScoreOption==1:
+                GenreScores.genreCriticScores("Mean_Scores")
+                publisherSalesLoop = False
+                loop=False
+            elif criticScoreOption==2:
+                GenreScores.genreCriticScores("Top_3")
+                publisherSalesLoop = False
+                loop=False
+            elif criticScoreOption==3:
+                GenreScores.genreCriticScores("Bottom_3")
+                publisherSalesLoop = False
+                loop=False
+            elif criticScoreOption==4:
+                print("Exiting...")
+                quit()
+            else:
+                print("Error: Invalid Option")
+                quit()
+        
     elif choice==2:
         print ("Option 2 Selected")
         loop=False
