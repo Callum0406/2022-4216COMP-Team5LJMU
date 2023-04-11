@@ -53,7 +53,11 @@ while loop:
         
     elif choice==2:
         #Callum's code
-        dc.dataCallum()
+        print("options")
+        print("Option 1: Ten Lowest Critic Scores")
+        print("Option 2: Ten Highest Critic Scores")
+        option = input("Pick an option [1-2]")
+        dc.graph(option)
         loop=False
     elif choice==3:
         #Louis' code
