@@ -11,7 +11,7 @@ print("2. Lowest Critic Scores")
 loop=True
 
 while loop:
-    choice = int(input("Enter your choice 1-2: "))
+    choice = int(input("Enter your choice [1-2]: "))
     
     if choice==1:
         print ("Option 1 Selected")
