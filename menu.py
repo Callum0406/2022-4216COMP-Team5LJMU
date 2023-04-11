@@ -2,7 +2,7 @@ import PublisherSalesPerRegion as PubSales
 import GenreCriticScores as GenreScores
 
 
-
+import GenreSalesNA as PieData
 import SalesbyRegion as RegSales
 import dataCallum as dc
 
@@ -12,7 +12,7 @@ def main_menu():
     print("2. Display 10 highest critically scored games")
     print("3. Display top 5 selling publishers per region")
     print("4. Display regions with most games sold")
-    print("5. Option 5")
+    print("5. Display sales by genre")
     print("6. Exit")
 
 loop=True
@@ -82,7 +82,7 @@ while loop:
         loop=False
         RegSales.SalesbyRegion()
     elif choice==5:
-        print("Option 5 Selected")
+        PieData.genreToSales()
         loop=False
     elif choice==6:
         print ("Exiting...")
