@@ -1,10 +1,11 @@
 import PublisherSalesPerRegion as PubSales
 import MeanCriticScores as MeanScores
+import dataCallum as dc
 
 def main_menu():
     print("--MENU--")
     print("1. Display Mean Critic score for each genre")
-    print("2. Option 2")
+    print("2. Display 10 highest critically scored games")
     print("3. Display top 5 selling publishers per region")
     print("4. Option 4")
     print("5. Option 5")
@@ -20,7 +21,8 @@ while loop:
         loop=False
         MeanScores.MeanCriticScores()
     elif choice==2:
-        print ("Option 2 Selected")
+        #Callum's code
+        dc.dataCallum()
         loop=False
     elif choice==3:
         #Louis' code
