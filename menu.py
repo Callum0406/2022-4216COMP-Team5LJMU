@@ -1,12 +1,13 @@
 import PublisherSalesPerRegion as PubSales
 import MeanCriticScores as MeanScores
+import SalesbyRegion as RegSales
 
 def main_menu():
     print("--MENU--")
     print("1. Display Mean Critic score for each genre")
     print("2. Option 2")
     print("3. Display top 5 selling publishers per region")
-    print("4. Option 4")
+    print("4. Display regions with most games sold")
     print("5. Option 5")
     print("6. Exit")
 
@@ -43,9 +44,11 @@ while loop:
             else:
                 print("Error: Invalid Option")
                 quit()
+    #Charlie's Code
     elif choice==4:
-        print ("Option 4 Selected")
+        print ("Sales by Region")
         loop=False
+        RegSales.SalesbyRegion()
     elif choice==5:
         print("Option 5 Selected")
         loop=False
