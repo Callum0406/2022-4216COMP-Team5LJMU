@@ -1,3 +1,5 @@
+import dataCallum as dc
+
 def main_menu():
     print("--MENU--")
     print("1. Option 1")
@@ -14,7 +16,11 @@ while loop:
     choice = int(input("Enter your choice [1-6]: "))
     
     if choice==1:
-        print ("Option 1 Selected")
+        print("options")
+        print("Option 1: Ten Lowest Critic Scores")
+        print("Option 2: Ten Highest Critic Scores")
+        option = input("Pick an option [1-2]")
+        dc.graph(option)
         loop=False
     elif choice==2:
         print ("Option 2 Selected")
