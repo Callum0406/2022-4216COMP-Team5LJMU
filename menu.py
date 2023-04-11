@@ -33,8 +33,7 @@ while loop:
         loop=False
     elif choice==5:
         print("Option 5 Selected")
-        PieData()
-        loop=False
+
     elif choice==6:
         print ("Exiting...")
         loop=False
