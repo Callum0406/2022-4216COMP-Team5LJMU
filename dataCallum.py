@@ -21,7 +21,7 @@ def graph(option):
         matplot.show()
         #produces bar chart
         quit()
-    elif option == "2":
+    elif option == 2:
         extracted_data = data.sort_values("Critic_Score", ascending=True).head(10)
             #shows data descending 
         name = extracted_data.Name
