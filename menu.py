@@ -2,7 +2,7 @@ import PublisherSalesPerRegion as PubSales
 import GenreCriticScores as GenreScores
 
 
-import GenreSalesNA as PieData
+import JoeMDatavis as PieData
 import SalesbyRegion as RegSales
 import dataCallum as dc
 
@@ -86,6 +86,7 @@ while loop:
         loop=False
         RegSales.SalesbyRegion()
     elif choice==5:
+	#Joe Morans Code
         PieData.genreToSales()
         loop=False
     elif choice==6:
