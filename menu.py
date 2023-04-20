@@ -34,15 +34,15 @@ while loop:
             criticScoreOption = int(input())
             if criticScoreOption==1:
                 GenreScores.genreCriticScores("Mean_Scores")
-                publisherSalesLoop = False
+                criticScoreLoop = False
                 loop=False
             elif criticScoreOption==2:
                 GenreScores.genreCriticScores("Top_3")
-                publisherSalesLoop = False
+                criticScoreLoop = False
                 loop=False
             elif criticScoreOption==3:
                 GenreScores.genreCriticScores("Bottom_3")
-                publisherSalesLoop = False
+                criticScoreLoop = False
                 loop=False
             elif criticScoreOption==4:
                 print("Exiting...")
