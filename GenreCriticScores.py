@@ -8,11 +8,11 @@ def genreCriticScores(option):
 
     if option == "Mean_Scores":
 
-        publisher_data = DATA.groupby("Genre").mean(numeric_only=True)["Critic_Score"].reset_index()
-        publisher_data = publisher_data.sort_values("Critic_Score", ascending=False)
+        genre_data = DATA.groupby("Genre").mean(numeric_only=True)["Critic_Score"].reset_index()
+        genre_data = genre_data.sort_values("Critic_Score", ascending=False)
 
-        genre_names = publisher_data.Genre
-        critic_score = publisher_data.Critic_Score
+        genre_names = genre_data.Genre
+        critic_score = genre_data.Critic_Score
 
         matplot.bar(genre_names, critic_score)
 
@@ -24,11 +24,11 @@ def genreCriticScores(option):
         matplot.show()
     
     if option == "Top_3":
-        publisher_data = DATA.groupby("Genre").sum(numeric_only=True)["Critic_Score"].reset_index()
-        publisher_data = publisher_data.sort_values("Critic_Score", ascending=False).head(3)
+        genre_data = DATA.groupby("Genre").sum(numeric_only=True)["Critic_Score"].reset_index()
+        genre_data = genre_data.sort_values("Critic_Score", ascending=False).head(3)
 
-        genre_names = publisher_data.Genre
-        critic_score = publisher_data.Critic_Score
+        genre_names = genre_data.Genre
+        critic_score = genre_data.Critic_Score
 
         matplot.bar(genre_names, critic_score)
 
@@ -40,11 +40,11 @@ def genreCriticScores(option):
         matplot.show()
     
     if option == "Bottom_3":
-        publisher_data = DATA.groupby("Genre").sum(numeric_only=True)["Critic_Score"].reset_index()
-        publisher_data = publisher_data.sort_values("Critic_Score", ascending=True).head(3)
+        genre_data = DATA.groupby("Genre").sum(numeric_only=True)["Critic_Score"].reset_index()
+        genre_data = genre_data.sort_values("Critic_Score", ascending=True).head(3)
 
-        genre_names = publisher_data.Genre
-        critic_score = publisher_data.Critic_Score
+        genre_names = genre_data.Genre
+        critic_score = genre_data.Critic_Score
 
         matplot.bar(genre_names, critic_score)
 
