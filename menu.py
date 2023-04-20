@@ -9,7 +9,7 @@ import dataCallum as dc
 def main_menu():
     print("--MENU--")
     print("1. Display Critic Score Data for Genres")
-    print("2. Display 10 highest critically scored games")
+    print("2. Display Critic Scores for Games")
     print("3. Display top 5 selling publishers per region")
     print("4. Display regions with most games sold")
     print("5. Display sales by genre")
@@ -53,7 +53,11 @@ while loop:
         
     elif choice==2:
         #Callum's code
-        dc.dataCallum()
+        print("Options")
+        print("Option 1: Ten Lowest Critic Scores")
+        print("Option 2: Ten Highest Critic Scores")
+        option = int(input("Pick an option [1-2]"))
+        dc.graph(option)
         loop=False
     elif choice==3:
         #Louis' code
