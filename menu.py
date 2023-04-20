@@ -86,9 +86,23 @@ while loop:
         loop=False
         RegSales.SalesbyRegion()
     elif choice==5:
-	#Joe Morans Code
-        PieData.genreToSales()
-        loop=False
+        #Joe Ms piechart data
+        loop=True
+        userRegChoice = 0
+        while   loop:
+                print("Select the region to display.")
+                print("1. North America")
+                print("2. Europe")
+                userRegChoice = int(input())
+                if userRegChoice==1:
+                    PieData.genreToSales("NA_Sales")
+                    loop=False
+                elif userRegChoice==2:
+                    PieData.genreToSales("EU_Sales")
+                    loop=False
+                else:
+                    print("Error: Invalid Option")
+                    quit()
     elif choice==6:
         print ("Exiting...")
         loop=False
