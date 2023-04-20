@@ -34,15 +34,15 @@ while loop:
             criticScoreOption = int(input())
             if criticScoreOption==1:
                 GenreScores.genreCriticScores("Mean_Scores")
-                publisherSalesLoop = False
+                criticScoreLoop = False
                 loop=False
             elif criticScoreOption==2:
                 GenreScores.genreCriticScores("Top_3")
-                publisherSalesLoop = False
+                criticScoreLoop = False
                 loop=False
             elif criticScoreOption==3:
                 GenreScores.genreCriticScores("Bottom_3")
-                publisherSalesLoop = False
+                criticScoreLoop = False
                 loop=False
             elif criticScoreOption==4:
                 print("Exiting...")
@@ -54,8 +54,8 @@ while loop:
     elif choice==2:
         #Callum's code
         print("Options")
-        print("Option 1: Ten Lowest Critic Scores")
-        print("Option 2: Ten Highest Critic Scores")
+        print("Option 1: Ten Games with Highest Critic Scores")
+        print("Option 2: Ten Games with Lowest Critic Scores")
         option = int(input("Pick an option [1-2]"))
         dc.graph(option)
         loop=False
@@ -79,7 +79,6 @@ while loop:
                 loop=False
             else:
                 print("Error: Invalid Option")
-                quit()
     #Charlie's Code
     elif choice==4:
         print ("Sales by Region")

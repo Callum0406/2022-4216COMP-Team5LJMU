@@ -8,7 +8,7 @@ data = pd.read_csv("Tagged-Data-Final.csv")
 def graph(option):
     if option == 1:
         extracted_data = data.sort_values("Critic_Score", ascending=False).head(10)
-            #shows data descending 
+            #shows data asecinding
         name = extracted_data.Name
         criticsc = extracted_data.Critic_Score
 
