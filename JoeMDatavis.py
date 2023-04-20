@@ -1,3 +1,5 @@
+#%%
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.colors as pltcol
@@ -51,3 +53,5 @@ def genreToSales(userRegion):
         
         plt.axis('equal')
         plt.show()
+
+print(genreToSales("NA_Sales"))
