@@ -79,7 +79,6 @@ while loop:
                 loop=False
             else:
                 print("Error: Invalid Option")
-                quit()
     #Charlie's Code
     elif choice==4:
         print ("Sales by Region")
