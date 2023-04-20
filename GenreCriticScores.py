@@ -58,3 +58,4 @@ def genreCriticScores(option):
 # genreCriticScores("Mean_Scores")
 # genreCriticScores("Top_3")
 # genreCriticScores("Bottom_3")
+#
