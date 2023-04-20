@@ -32,7 +32,7 @@ def genreToSales(userRegion):
         plt.pie(region_name, labels=genre_label, autopct='%1.1f%%', 
                 explode=(0.1,0.05,0.05,0.1,0.07), shadow=True, 
                 colors=['#485696','#e34a6f','#f7934c','#80ded9','#a682ff'])             
-        plt.title('Top 5 NA Sales by Genre')        
+        plt.title('Top 5 NA Sales by Genre')
         plt.axis('equal')
         plt.show()
 
