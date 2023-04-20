@@ -54,8 +54,8 @@ while loop:
     elif choice==2:
         #Callum's code
         print("Options")
-        print("Option 1: Ten Lowest Critic Scores")
-        print("Option 2: Ten Highest Critic Scores")
+        print("Option 1: Ten Games with Highest Critic Scores")
+        print("Option 2: Ten Games with Lowest Critic Scores")
         option = int(input("Pick an option [1-2]"))
         dc.graph(option)
         loop=False
