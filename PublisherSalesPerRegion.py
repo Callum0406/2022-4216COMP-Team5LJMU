@@ -7,7 +7,7 @@ DATA = pd.read_csv("Tagged-Data-Final.csv")
 
  
 
-def top5PublisherSales(region):
+def top5PublisherSales(region, sales):
     #Check to see what region has been selected
     if region == "NA_Sales":
         #Group the data based on the publisher column and sum that data up.

@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Read the data from the Excel file
 DATA = pd.read_csv('Tagged-Data-Final.csv')
 
-def SalesbyRegion(sales):
+def SalesbyRegion():
     # Get the top 5 developer sales for each region
     global_sales = DATA.nlargest(5, 'Global_Sales')['Global_Sales'].tolist()
     na_sales = DATA.nlargest(5, 'NA_Sales')['NA_Sales'].tolist()    
@@ -34,3 +34,6 @@ def SalesbyRegion(sales):
 
 # Display the plot
     plt.show()
+
+# Call the function to generate the plot
+SalesbyRegion()
