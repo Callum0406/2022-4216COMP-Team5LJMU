@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 DATA = pd.read_csv('Tagged-Data-Final.csv')
 
 def SalesbyRegion():
-    # Get the top 5 developer sales for each region
+    # Get the top 5 sales for each region
     global_sales = DATA.nlargest(5, 'Global_Sales')['Global_Sales'].tolist()
     na_sales = DATA.nlargest(5, 'NA_Sales')['NA_Sales'].tolist()    
     eu_sales = DATA.nlargest(5, 'EU_Sales')['EU_Sales'].tolist()
