@@ -89,7 +89,7 @@ while loop:
         PieLoop = True
         loop=False
         userRegChoice = 0
-        while   loop:
+        while   PieLoop:
                 print("Select the region to display.")
                 print("1. North America")
                 print("2. Europe")
